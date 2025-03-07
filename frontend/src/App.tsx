@@ -1,6 +1,9 @@
-import "./App.css";
-import data from "./CollegeBasketballTeams.json";
+import './App.css';
 
+//Import NCAA Team Info from the Json file
+import data from './CollegeBasketballTeams.json';
+
+//Header for the page
 function Heading() {
   return (
     <>
@@ -9,6 +12,7 @@ function Heading() {
   );
 }
 
+//Team Card with their name, mascot, and location
 function Team({
   schoolName,
   mascotName,
@@ -31,6 +35,7 @@ function Team({
   );
 }
 
+//Map through the json file and pull out the name, mascot, city, and state for each team and pass each single team to the Team function
 function TeamList() {
   return (
     <div className="team-list">
@@ -48,6 +53,7 @@ function TeamList() {
   );
 }
 
+//App function that combines the functions on the main page
 function App() {
   return (
     <>
